@@ -15,12 +15,12 @@
 
 		<div class="position-absolute top-50 start-50 translate-middle">
 		<div class="p-2  bg-body rounded">
-			<h3 >Login</h3>
+			<h3 class="m-auto">Login</h3>
 			<form action="<%= request.getContextPath()%>/ServletLogin" method="post" class="needs-validation" novalidate>
 			  <div class="mb-3">
-			    <label for="email" class="form-label">E-mail</label>
-			    <input type="email" class="form-control" id="email" name="email" required>
-			    <div id="ajudaEmail" class="form-text">Nós nunca compartilhamos seu e-mail com ninguém.</div>
+			    <label for="login" class="form-label">Login</label>
+			    <input type="text" class="form-control" id="login" name="login" required>
+			    <div id="ajudaLogin" class="form-text">Nós nunca compartilhamos seu e-mail com ninguém.</div>
 			    <div class="valid-feedback">
 			      OK!
 			    </div>
@@ -29,14 +29,15 @@
 			    </div>
 			  </div>
 			  <div class="mb-3">
-			    <label for="senha" class="form-label">Senha</label>
-			    <input type="password" class="form-control" id="senha">
+			    <label for="password" class="form-label">Senha</label>
+			    <input type="password" class="form-control" id="password" name="password">
 			    <div class="invalid-feedback">
 			        Por favor, coloque uma senha válida!
 			    </div>
 			  </div>
 			  <button type="submit" class="btn btn-success">ENTRAR</button>
 			  <button type="submit" class="btn btn-primary">REGISTRAR</button>
+				<div class="text-danger my-2 fw-normal">${msg}</div>
 			</form>
 		</div>
 		</div>
